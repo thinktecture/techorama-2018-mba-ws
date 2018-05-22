@@ -1,0 +1,6 @@
+﻿{
+  "IsEncrypted": false,
+  "Values": {
+    "Db": "AccountEndpoint=REPLACE_THIS_WITH_CONNECTIONSTRING"
+  }
+}
