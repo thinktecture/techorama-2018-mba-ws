@@ -10,7 +10,7 @@
     "build-aot": "rimraf build && ng build --prod --aot=true --base-href=\".\" --output-path=\"build\"",
     "lint": "ng lint",
     "prepare-electron": "mkdirp ./tmp/web && ncp resources/electron tmp && ncp build tmp/web",
-    "package-desktop": "npm run prepare-electron && electron-packager ./tmp/ --all --electron-version=1.8.6 --icon=\"resources/assets/icon\" --out=./dist/desktop/ --overwrite && rimraf tmp",
+    "package-desktop": "npm run prepare-electron && electron-packager ./tmp/ --all --asar --electron-version=1.8.6 --icon=\"resources/assets/icon\" --out=./dist/desktop/ --overwrite && rimraf tmp",
     "package-desktop-macos": "npm run prepare-electron && electron-packager ./tmp/ --platform=darwin --electron-version=1.8.6 --icon=\"resources/assets/icon\" --out=./dist/desktop/ --overwrite && rimraf tmp",
     "build-desktop": "npm run build -- --configuration=desktop && npm run package-desktop",
     "build-desktop-macos": "npm run build -- --configuration=desktop && npm run package-desktop-macos",
