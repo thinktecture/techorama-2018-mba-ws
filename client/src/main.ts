@@ -14,4 +14,8 @@ const bootstrapApp = () => {
     .catch(err => console.log(err));
 };
 
-document.addEventListener('deviceready', bootstrapApp, false);
+if (window['cordova']) {
+  document.addEventListener('deviceready', bootstrapApp, false);
+} else {
+  bootstrapApp();
+}
