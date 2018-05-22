@@ -10,20 +10,20 @@ const createWindow = () => {
     height: 700,
     title: 'Conference App',
     webPreferences: {
-      nodeIntegration: false
-    }
+      nodeIntegration: false,
+    },
   };
   mainWindow = new BrowserWindow(options);
   const mainWindowUrl = url.format({
     pathname: path.join(__dirname, 'web', 'index.html'),
     protocol: 'file:',
-    slashes: true
+    slashes: true,
   });
   globalShortcut.register('CommandOrControl+Shift+D', () => {
     mainWindow.webContents.toggleDevTools();
-  })
+  });
   mainWindow.loadURL(mainWindowUrl);
-}
+};
 
 app.on('ready', createWindow);
 
@@ -31,7 +31,6 @@ app.on('window-all-closed', () => {
   if (process.platform !== 'darwin') {
     app.quit();
   }
-
 });
 
 app.on('quit', () => {
