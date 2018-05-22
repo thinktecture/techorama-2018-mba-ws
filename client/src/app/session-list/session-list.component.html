@@ -1,0 +1,16 @@
+<div class="big-margin-top">
+  <h4>Sessions</h4>
+
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <td>Title</td>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let session of sessions" class="clickable" [routerLink]="session.id">
+        <td>{{session.title}}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>

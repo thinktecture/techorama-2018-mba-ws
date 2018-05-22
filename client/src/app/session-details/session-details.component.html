@@ -1,0 +1,11 @@
+<div class="big-margin-top">
+  <h4 *ngIf="session">{{session.title}}</h4>
+  <h4 *ngIf="!session">Loading Session ...</h4>
+  <div *ngIf="session">
+    <small *ngFor="let speaker of session.speakers">
+      {{speaker.firstname}} {{speaker.lastname}}
+    </small>
+    <br/>
+    <div>{{session.description}}</div>
+  </div>
+</div>
