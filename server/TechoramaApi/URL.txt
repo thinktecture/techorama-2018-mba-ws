@@ -1,0 +1,1 @@
+﻿https://techorama2018be-api.azurewebsites.net/api/sessions
