@@ -6,10 +6,10 @@ namespace TechoramaApi
 {
     public static class KeepItWarm
     {
-        //[FunctionName("KeepItWarm")]
-        //public static void Run([TimerTrigger("0 */9 * * * *")]TimerInfo myTimer, TraceWriter log)
-        //{
-        //    log.Info($"C# Timer trigger function executed at: {DateTime.Now}");
-        //}
+        [FunctionName("KeepItWarm")]
+        public static void Run([TimerTrigger("0 */9 * * * *")]TimerInfo myTimer, TraceWriter log)
+        {
+            log.Info($"C# Timer trigger function executed at: {DateTime.Now}");
+        }
     }
 }
